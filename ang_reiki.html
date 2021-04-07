@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/tailwind.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <title>Hahnenkorb - Reiki</title>
+  </head>
+  <body class="bg-gradient-to-tr from-yellow-100 to-yellow-200 flex flex-col">
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+    <!-- Navigation -->
+
+    <div
+      class="w-full bg-green-300 md:px-10 px-5 p-2 shadow shadow-md z-50 fixed"
+    >
+      <nav class="flex flex-row md:justify-between font-mono">
+        <div class="flex flex-row justify-between md:w-auto w-full">
+          <div>
+            <i class="fas fa-egg mr-2 pt-1.5"></i>
+            <a
+              class="text-lg font-semibold tracking-widest text-gray-800 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline hover:text-purple-500"
+              href="/index.html"
+              >HAHNENKORB</a
+            >
+          </div>
+
+          <p id="btn-hamburger" class="md:hidden">
+            <i class="text-black fas fa-bars"></i>
+          </p>
+        </div>
+
+        <ul id="mobileMenu" class="hidden md:pr-0 md:flex md:flex-row">
+          <li
+            class="px-4 py-1 mt-0 block text-md font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
+          >
+            <a href="./bio.html">Über Mich</a>
+          </li>
+          <!-- DROPDOWN -->
+          <div x-data="{ dropdownOpen: false }" class="relative">
+            <button
+              @click="dropdownOpen = !dropdownOpen"
+              class="relative z-10 block rounded-md px-4 py-1 mt-0 block text-md font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex"
+            >
+              Angebote
+            </button>
+
+            <div
+              x-show="dropdownOpen"
+              @click="dropdownOpen = false"
+              class="fixed inset-0 h-full w-full z-10"
+            ></div>
+
+            <div
+              x-show="dropdownOpen"
+              class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20"
+            >
+              <a
+                href="/ang_musik.html"
+                class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white"
+              >
+                Musikunterricht
+              </a>
+              <a
+                href="/ang_trauma.html"
+                class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white"
+              >
+                Traumapädagogik
+              </a>
+              <a
+                href="/ang_reiki.html"
+                class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white"
+              >
+                Reiki-Behandlung
+              </a>
+            </div>
+          </div>
+          <li
+            class="px-4 py-1 mt-0 block text-md font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          >
+            <a href="./preise.html">Preise</a>
+          </li>
+          <li
+            class="px-4 py-1 mt-0 block text-md font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          >
+            <a href="./misc.html">Extras</a>
+          </li>
+          <li
+            class="px-4 py-1 mt-0 block text-md font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          >
+            <a href="./kontakt.html">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Page Content -->
+    <div class="mx-auto mt-12 pt-12 md:pt-10 md:px-10 text-lg">
+      <div
+        class="bg-green-100 py-5 mb-10 sm:mx-12 md:mx-10 xl:mx-32 2xl:mx-36 mx-8 lg:max-w-6xl rounded-xl px-4 lg:px-6"
+      >
+        <!-- Heading Row -->
+
+        <!-- Intro -->
+
+        <div class="mx-auto max-w-2xl justify-center flex flex-col">
+          <h1
+            class="text-4xl font-semibold text-gray-700 mb-10 rounded mx-auto p-1 font-mono tracking-widest pt-6"
+          >
+            Reiki
+          </h1>
+          <!-- Central Portrait -->
+          <div class="flex justify-center">
+            <div class="w-11/12 sm:w-8/12 px-4 lg:6/12">
+              <img
+                src="/assets/card-reiki.jpg"
+                class="shadow-lg rounded max-w-full h-auto align-middle border-none"
+              />
+            </div>
+          </div>
+
+          <!-- Wie -->
+          <div class="pt-6">
+            <h4
+              class="pt-6 text-2xl font-medium tracking-wider text-gray-800 italic transform translate-x-2"
+            >
+              Wie
+            </h4>
+            <p class="text-left pt-2">
+              Bei einer Reiki-Behandlung liegen Sie entspannt auf dem Rücken und
+              lassen sich auf das Erlebnis universeller Energien ein. Die
+              meisten erzählen von einem tiefen bis sehr tiefen
+              Entspannungszustand, verbunden mit dem Gefühl, in einem
+              Energiefeld zu liegen.
+            </p>
+          </div>
+
+          <!-- Was -->
+          <div class="">
+            <h4
+              class="pt-10 text-2xl font-medium tracking-wider text-gray-800 italic transform translate-x-2"
+            >
+              Was
+            </h4>
+            <p class="text-left pt-2">
+              Alle berichten, dass sie sich anschließend erfrischt und ausgeruht
+              fühlen. Wenn ich während der Behandlung etwas Auffälliges in Ihrer
+              Aura sehe, erhalten Sie vielleicht einen Hinweis auf eine altes
+              oder neues Lebensthema.
+            </p>
+          </div>
+
+          <!-- Kinder -->
+          <div class="">
+            <h4
+              class="pt-10 text-2xl font-medium tracking-wider text-gray-800 italic transform translate-x-2"
+            >
+              Wer
+            </h4>
+            <p class="text-left pt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
+              quisquam? Mollitia obcaecati distinctio sit. Est maiores maxime
+              accusamus eum nemo earum minus qui, officiis modi nihil eveniet
+              iste placeat iure.
+            </p>
+          </div>
+        </div>
+
+        <!-- Zitat -->
+        <div class="mt-10 flex justify-center md:w-9/12 mx-auto">
+          <div
+            class="p-1 card-body bg-gray-100 rounded shadow shadow-lg max-w-4xl"
+          >
+            <p class="p-1 italic">
+              Bei mir gilt der Grundsatz: <br />Der Spaß und die Freude an der
+              eigenen Musik stehen immer an erster Stelle. Der allererste Ton
+              kann schon mal ein Hahnenschrei sein, muss aber nicht der letzte
+              Schrei sein.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="py-0 bg-green-800 shadow shadow-inner max-w-full justify-center flex"
+    >
+      <ul
+        class="flex justify-evenly m-0 text-center text-white max-w-4xl gap-4"
+      >
+        <li>
+          <a href="./kontakt.html" class="hover:underline">Kontakt</a>
+        </li>
+        <li class="">
+          <a href="./impressum.html" class="hover:underline">Impressum</a>
+        </li>
+        <li class="">
+          <a href="./datenschutz.html" class="hover:underline">Datenschutz</a>
+        </li>
+        <li class="">Copyright &copy; KHahn 2021</li>
+      </ul>
+    </footer>
+  </body>
+</html>

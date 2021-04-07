@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/tailwind.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <title>Hahnenkorb - Über Mich</title>
+  </head>
+  <body class="bg-gradient-to-tr from-yellow-100 to-yellow-200 flex flex-col">
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+    <!-- Navigation -->
+    <div
+      class="w-full bg-green-300 md:px-10 px-5 p-2 shadow shadow-md z-50 fixed"
+    >
+      <nav class="flex flex-row md:justify-between font-mono">
+        <div class="flex flex-row justify-between md:w-auto w-full">
+          <div>
+            <i class="fas fa-egg mr-2 pt-1.5"></i>
+            <a
+              class="text-lg font-semibold tracking-widest text-gray-800 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline hover:text-purple-500"
+              href="/index.html"
+              >HAHNENKORB</a
+            >
+          </div>
+
+          <p id="btn-hamburger" class="md:hidden">
+            <i class="text-black fas fa-bars"></i>
+          </p>
+        </div>
+
+        <ul id="mobileMenu" class="hidden md:pr-0 md:flex md:flex-row">
+          <li
+            class="px-4 py-1 mt-0 block text-md font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
+          >
+            <a href="./bio.html">Über Mich</a>
+          </li>
+          <!-- DROPDOWN -->
+          <div x-data="{ dropdownOpen: false }" class="relative">
+            <button
+              @click="dropdownOpen = !dropdownOpen"
+              class="relative z-10 block rounded-md px-4 py-1 mt-0 block text-md font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex"
+            >
+              Angebote
+            </button>
+
+            <div
+              x-show="dropdownOpen"
+              @click="dropdownOpen = false"
+              class="fixed inset-0 h-full w-full z-10"
+            ></div>
+
+            <div
+              x-show="dropdownOpen"
+              class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20"
+            >
+              <a
+                href="/ang_musik.html"
+                class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white"
+              >
+                Musikunterricht
+              </a>
+              <a
+                href="/ang_trauma.html"
+                class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white"
+              >
+                Traumapädagogik
+              </a>
+              <a
+                href="/ang_reiki.html"
+                class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white"
+              >
+                Reiki-Behandlung
+              </a>
+            </div>
+          </div>
+          <li
+            class="px-4 py-1 mt-0 block text-md font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline bg-gray-200"
+          >
+            <a href="./preise.html">Preise</a>
+          </li>
+          <li
+            class="px-4 py-1 mt-0 block text-md font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          >
+            <a href="./misc.html">Extras</a>
+          </li>
+          <li
+            class="px-4 py-1 mt-0 block text-md font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          >
+            <a href="./kontakt.html">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Page Content -->
+    <div class="mt-12 pt-12 md:pt-10 md:px-10 justify-center h-screen mx-auto text-lg">
+      <!-- text box -->
+      <div
+        class="bg-green-100 py-5 mb-10 sm:mx-12 md:mx-10 xl:mx-32 2xl:mx-36 mx-8 lg:max-w-4xl rounded-xl px-4 lg:px-6"
+      >
+        <!-- Heading Row -->
+
+        <!-- Preise -->
+
+        <div class="mx-auto justify-center flex flex-col">
+          <h1
+            class="text-4xl font-semibold text-gray-700 mb-0 rounded mx-auto font-mono tracking-wide"
+          >
+            PREISE
+          </h1>
+          <p class="text-center text-2xl mb-8 "><i class="fas fa-money-bill"></i></p>
+
+          <!-- Preise Section -->
+          <section class="lg:px-2">
+
+
+            <!-- Musik Box -->
+            <div class="p-3">
+              <h3 class="text-2xl font-medium tracking-wider text-gray-800 italic transform translate-x-2">Musikunterricht</h3>
+  
+              <ul class="text-left text-gray-800 font-normal pt-2">
+                <li class="flex flex-row">
+                  <i class="fas fa-caret-right pt-1 pr-1"></i>
+                  Die erste Stunde kostet 40,-€. Man kann Geige, Bratsche, Cello
+                  und Klavier ausprobieren. Termine werden stündlich vergeben.
+                </li>
+                <li class="flex flex-row">
+                  <i class="fas fa-caret-right pt-1 pr-1"></i>
+                  Jede weitere Stunde kostet 45€
+                </li>
+                <li class="flex flex-row">
+                  <i class="fas fa-caret-right pt-1 pr-1"></i>
+                  Es gibt 10er Karten für 360€
+                </li>
+              </ul>
+            </div>
+  
+            <hr class="my-2 w-8/12 mx-auto h-0.5 bg-gray-500 text-yellow-100" />
+  
+            <!-- Reiki Box -->
+            <div class="p-3">
+              <h3 class="text-2xl font-semibold">Reiki</h3>
+  
+              <ul class="text-left pt-2">
+                <li class="flex flex-row">
+                  <i class="fas fa-caret-right pt-1 pr-1"></i>
+                  Die erste Stunde kostet 40,-€. Man kann Geige, Bratsche, Cello
+                  und Klavier ausprobieren. Termine werden stündlich vergeben.
+                </li>
+                <li class="flex flex-row">
+                  <i class="fas fa-caret-right pt-1 pr-1"></i>
+                  Jede weitere Stunde kostet 45€
+                </li>
+                <li class="flex flex-row">
+                  <i class="fas fa-caret-right pt-1 pr-1"></i>
+                  Es gibt 10er Karten für 360€
+                </li>
+              </ul>
+            </div>
+  
+            <hr class="my-2 w-8/12 mx-auto h-0.5 bg-gray-500 text-yellow-100" />
+  
+            <!-- Trauma Box -->
+            <div class="p-3">
+              <h3 class="text-2xl font-semibold">Trauma Behandlung</h3>
+  
+              <ul class="text-left pt-2">
+                <li class="flex flex-row">
+                  <i class="fas fa-caret-right pt-1 pr-1"></i>
+                  Die erste Stunde kostet 40,-€. Man kann Geige, Bratsche, Cello
+                  und Klavier ausprobieren. Termine werden stündlich vergeben.
+                </li>
+                <li class="flex flex-row">
+                  <i class="fas fa-caret-right pt-1 pr-1"></i>
+                  Jede weitere Stunde kostet 45€
+                </li>
+                <li class="flex flex-row">
+                  <i class="fas fa-caret-right pt-1 pr-1"></i>
+                  Es gibt 10er Karten für 360€
+                </li>
+              </ul>
+            </div>
+          </div>
+  
+          <!-- Zitat -->
+          <div class="mt-6 mb-4  flex justify-center w-10/12 md:w-8/12 mx-auto">
+            <div
+              class="p-1 card-body bg-white rounded shadow shadow-lg max-w-4xl"
+            >
+              <p class="p-1">
+                Zur Terminvereinbarung bitte
+                <span class="font-semibold"> (Nummer) </span>
+                anrufen oder hier klicken.
+              </p>
+              <button
+                class="flex justify-center text-white bg-blue-400 w-2/6 focus:outline-none hover:bg-blue-600 rounded-xl shadow-md mx-auto my-2 font-semibold"
+              >
+                <a href="/kontakt.html" class="">Kontakt</a>
+              </button>
+            </div>
+          </div>
+          </section>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="py-0 bg-green-800 shadow shadow-inner max-w-full justify-center flex"
+    >
+    <ul
+    class="flex justify-evenly m-0 text-center text-white max-w-4xl gap-4"
+  >
+    <li>
+      <a href="./kontakt.html" class="hover:underline">Kontakt</a>
+    </li>
+    <li class="">
+      <a href="./impressum.html" class="hover:underline">Impressum</a>
+    </li>
+    <li class="">
+      <a href="./datenschutz.html" class="hover:underline">Datenschutz</a>
+    </li>
+    <li class="">Copyright &copy; KHahn 2021</li>
+  </ul>
+    </footer>
+  </body>
+</html>

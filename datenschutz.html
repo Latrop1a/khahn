@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/tailwind.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <title>Hahnenkorb - Dr. Katrin Hahn</title>
+  </head>
+  <body class="bg-gradient-to-tr from-yellow-100 to-yellow-200">
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+    <!-- NAV -->
+    <div
+      class="w-full bg-green-300 md:px-10 px-5 p-2 shadow shadow-md z-50 fixed"
+    >
+      <nav class="flex flex-row md:justify-between font-mono">
+        <div class="flex flex-row justify-between md:w-auto w-full">
+          <div>
+            <i class="fas fa-egg mr-2 pt-1.5"></i>
+            <a
+              class="text-lg font-semibold tracking-widest text-gray-800 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
+              href="/index.html"
+              >HAHNENKORB</a
+            >
+          </div>
+
+          <p id="btn-hamburger" class="md:hidden">
+            <i class="text-black fas fa-bars"></i>
+          </p>
+        </div>
+
+        <ul id="mobileMenu" class="hidden md:pr-0 md:flex md:flex-row">
+          <li
+            class="px-4 py-1 mt-0 block text-md font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          >
+            <a href="./bio.html">Über Mich</a>
+          </li>
+          <!-- DROPDOWN -->
+          <div x-data="{ dropdownOpen: false }" class="relative">
+            <button
+              @click="dropdownOpen = !dropdownOpen"
+              class="relative z-10 block rounded-md px-4 py-1 mt-0 block text-md font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex"
+            >
+              Angebote
+            </button>
+
+            <div
+              x-show="dropdownOpen"
+              @click="dropdownOpen = false"
+              class="fixed inset-0 h-full w-full z-10"
+            ></div>
+
+            <div
+              x-show="dropdownOpen"
+              class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20"
+            >
+              <a
+                href="/ang_musik.html"
+                class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white"
+              >
+                Musikunterricht
+              </a>
+              <a
+                href="/ang_trauma.html"
+                class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white"
+              >
+                Traumapädagogik
+              </a>
+              <a
+                href="/ang_reiki.html"
+                class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white"
+              >
+                Reiki-Behandlung
+              </a>
+            </div>
+          </div>
+          <li
+            class="px-4 py-1 mt-0 block text-md font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          >
+            <a href="./misc.html">Hintergrund</a>
+          </li>
+          <li
+            class="px-4 py-1 mt-0 block text-md font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          >
+            <a href="./blog.html">Blog</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="pt-24 mx-auto md:w-4/6 w-11/12 min-h-screen">
+      <p class="headinhalt">
+        <a name="dsverantwortlicher"></a
+        ><strong
+          >Verantwortliche Stelle im Sinne der Datenschutzgesetze ist:</strong
+        >
+      </p>
+      <p>
+        Dr. Katrin Hahn, Straße, D-5xxxx Unkelbach Tel.: +, E-Mail:
+        [at]t-online.de
+      </p>
+      <p class="font-bold pt-4">
+        Erfassung allgemeiner Informationen / Logfiles:
+      </p>
+      <p>
+        Wenn Sie auf meine Webseite (www.khahn.de) zugreifen, werden vom
+        Provider automatisch Informationen allgemeiner Natur erfasst. Diese
+        Informationen (die sogenannten Server-Logfiles) beinhalten Infos wie:
+        IP-Adresse/Hostname des zugreifenden Rechners, Browsertyp/Version,
+        Betriebssystem, Referrer-URL, Uhrzeit der Serveranfrage. Hierbei handelt
+        es sich ausschließlich um anonyme Informationen, die keine Rückschlüsse
+        auf Ihre Person zulassen. Diese anonyme Informationen fallen bei Nutzung
+        des Internets zwingend an und können statistisch ausgewertet werden, um
+        diesen Internetauftritt zu optimieren.
+      </p>
+      <p class="font-bold pt-4">Cookies:</p>
+      <p>
+        Meine Website verwendet teilweise Cookies.<br />
+        Dies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und
+        die vom Browser gespeichert werden. Sie dienen u.a. dazu Web-Angebote
+        effektiver und sicherer zu machen. Cookies richten keinen Schaden an und
+        enthalten keine Viren<br />
+        Die meisten der auf diesen Webseiten verwendeten Cookies sind so
+        genannte &#8220;Session-Cookies&#8221;. Sie werden nach Ende Ihres
+        Besuchs automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät
+        gespeichert bis Sie diese löschen. Diese Cookies ermöglichen es, Ihren
+        Browser beim nächsten Besuch wiederzuerkennen.<br />
+        Sie können die Verwendung von Cookies über die Einstellungen Ihres
+        Browsers deaktivieren, bei der Deaktivierung von Cookies kann die
+        Funktionalität der Website eingeschränkt sein.
+      </p>
+      <p class="font-bold pt-4">Personenbezogenen Daten und Datenvermeidung:</p>
+      <p>
+        Die Nutzung dieser Webseite ist ohne die Angabe personenbezogener Daten
+        (Name, Adresse, Telefonnr., E-Mail-Adresse etc.) möglich. Ich sammle
+        keine Daten von Ihnen, es sei denn, Sie kontaktieren mich per E-Mail.
+        Die personenbezogenen Daten werden dann nur so lange gespeichert, wie
+        dies zur Bearbeitung der Anfrage notwendig ist oder wie es die vom
+        Gesetzgeber vorgesehenen ist.
+      </p>
+      <p class="font-bold pt-4">
+        Rechte auf Auskunft, Berichtigung, Löschung, Sperrung und Widerspruch:
+      </p>
+      <p>
+        Sie haben jederzeit das Recht, auf unentgeltliche Auskunft über Ihre bei
+        mir gespeicherten personenbezogenen Daten. Ebenso haben Sie das Recht
+        auf Sperrung, Berichtigung oder Löschung Ihrer personenbezogenen Daten,
+        abgesehen von der vorgeschriebenen Datenspeicherung zur
+        Geschäftsabwicklung. Bitte wenden Sie sich dazu an die
+        <a href="#dsverantwortlicher">hier angegebene verantwortliche Stelle</a
+        >.
+      </p>
+      <p class="font-bold pt-4">Änderung unserer Datenschutzbestimmungen:></p>
+      <p class="mb-4">
+        Ich behalte mir vor, die Datenschutzerklärung bei Bedarf bzw. bei
+        Änderungen meiner Leistungen oder bei der Einführung neuer Funktionen
+        anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen
+        entspricht. Für Ihren erneuten Besuch gilt dann die Datenschutzerklärung
+        zum Zeitpunkt des Seitenbesuchs.
+      </p>
+    </div>
+    <footer
+      class="py-0 bg-green-800 shadow shadow-inner max-w-full justify-center flex"
+    >
+      <ul
+        class="flex justify-evenly m-0 text-center text-white max-w-4xl gap-4"
+      >
+        <li>
+          <a href="./kontakt.html" class="hover:underline">Kontakt</a>
+        </li>
+        <li class="">
+          <a href="./impressum.html" class="hover:underline">Impressum</a>
+        </li>
+        <li class="">
+          <a href="./datenschutz.html" class="hover:underline">Datenschutz</a>
+        </li>
+        <li class="">Copyright &copy; KHahn 2021</li>
+      </ul>
+    </footer>
+  </body>
+</html>
